@@ -5,7 +5,24 @@ date: 2024-05-16 16:54:35 +0900
 categories: jekyll update
 ---
 
-최혜지씨!!
+HTML 문서 기본 양식
+vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+</html>
+```
+
+<img src="../img/html_element.png>
+
+태그와 콘텐트, 그리고 속성
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
