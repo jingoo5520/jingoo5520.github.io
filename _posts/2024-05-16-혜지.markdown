@@ -1,0 +1,12 @@
+---
+layout: post
+title: "최혜지씨!!"
+date: 2024-05-16 16:54:35 +0900
+categories: jekyll update
+---
+
+최혜지씨!!
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]: https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
