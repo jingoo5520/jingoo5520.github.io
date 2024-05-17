@@ -1,0 +1,212 @@
+---
+layout: default
+title: "HTML title"
+date: 2024-05-16 16:54:35 +0900
+categories: jekyll update
+---
+
+# HTML
+
+## HTML 문서 기본 양식
+
+vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+</html>
+```
+
+<br><br>
+
+## 태그와 콘텐트, 그리고 속성
+
+### 제목 태그
+
+`<h1>` `<h2>` ... `<h6>`
+
+> 입력
+
+```html
+<h1>제목</h1>
+<h2>제목</h2>
+<h3>제목</h3>
+<h4>제목</h4>
+<h5>제목</h5>
+<h6>제목</h6>
+```
+
+> 출력
+
+# h1 제목
+
+## h1 제목
+
+### h1 제목
+
+#### h1 제목
+
+##### h1 제목
+
+###### h1 제목
+
+<br><br>
+
+### 문단 태그
+
+`<p></P>`
+
+> 입력
+
+```html
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries, but also
+    the leap into electronic typesetting, remaining essentially unchanged. It
+    was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software
+    like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+<p>
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+    roots in a piece of classical Latin literature from 45 BC, making it over
+    2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+    College in Virginia, looked up one of the more obscure Latin words,
+    consectetur, from a Lorem Ipsum passage, and going through the cites of the
+    word in classical literature, discovered the undoubtable source. Lorem Ipsum
+    comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+    (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
+    treatise on the theory of ethics, very popular during the Renaissance. The
+    first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
+    in section 1.10.32.
+</p>
+```
+
+> 출력
+
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+<p>
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+</p>
+
+<br><br>
+
+### 링크 태그
+
+`<a></a>`
+
+> 입력
+
+```html
+<a href="https://www.naver.com">네이버</a>
+```
+
+> 출력
+
+<a href="https://www.naver.com">네이버</a>
+
+> 속성
+
+`href` 이동할 링크의 주소나 위치 값
+
+<br><br>
+
+### 서식 있는 텍스트 태그
+
+`<pre></pre>` <br> 서식 있는(Preformatted) 텍스트를 넣기 위한 태그
+
+> 입력
+
+```html
+<pre>
+    해가 저문 아홉 시 옷을 걸치고
+    아무도 돌아오지 않은 집을 나설 때
+    가로등의 불빛이 하나둘씩 켜지고
+    오늘 하루 고생한 사람들이 모일 때
+    한 잔씩 한 테이블씩 정리를 하고
+    힘들면 한 십 분씩 쉬기도 하고
+    한 번씩 또 한 번씩 생각난대도
+    보고 싶어도 이젠 아무 사이 아닌데
+    하루 종일 너라는 핑계를 대고
+    바보 같이 노래를 불러 보아도
+    아직도 날 올려다 보던 네 눈빛
+    장난칠 때 웃으며 때리던 손길
+    사진 속을 몇 번을 들여다 보고
+    한심하게 속앓이 흘려 보아도
+    아무도 날 울리지 않는 전화기
+    집으로 돌아가는 길
+    새벽 가로수길    
+</pre>
+```
+
+> 출력
+
+해가 저문 아홉 시 옷을 걸치고<br>
+아무도 돌아오지 않은 집을 나설 때<br>
+가로등의 불빛이 하나둘씩 켜지고<br>
+오늘 하루 고생한 사람들이 모일 때<br>
+한 잔씩 한 테이블씩 정리를 하고<br>
+힘들면 한 십 분씩 쉬기도 하고<br>
+한 번씩 또 한 번씩 생각난대도<br>
+보고 싶어도 이젠 아무 사이 아닌데<br>
+하루 종일 너라는 핑계를 대고<br>
+바보 같이 노래를 불러 보아도<br>
+아직도 날 올려다 보던 네 눈빛<br>
+장난칠 때 웃으며 때리던 손길<br>
+사진 속을 몇 번을 들여다 보고<br>
+한심하게 속앓이 흘려 보아도<br>
+아무도 날 울리지 않는 전화기<br>
+집으로 돌아가는 길<br>
+새벽 가로수길
+
+<br><br>
+
+### 수평선 태그
+
+`<hr>`
+
+> 입력
+
+```html
+첫 번째 줄
+<hr />
+두 번째 줄
+```
+
+> 출력
+
+첫 번째 줄
+
+<hr />
+
+두 번째 줄
+
+<br>
+
+<br><br>
+
+### 줄바꿈 태그
+
+`<br>`
+
+> 입력
+
+```html
+첫 번째 줄<br />두 번째 줄
+```
+
+> 출력
+
+첫 번째 줄<br />두 번째 줄
+
+<br>
