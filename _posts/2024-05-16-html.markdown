@@ -287,13 +287,21 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 > 입력
 
 ```html
-<img src="D:\lecture\html\img\caffe_americano.png" alt="아메리카노 이미지" />
+아메리카노<br />
+<img src="../img/americano.png" alt="아메리카노 이미지" />
+
+카페라떼<br />
+<img src="error" alt="카페라떼 이미지" />
 ```
 
 > 출력
 
-<img src="../img/americano.png" alt="아메리카노 이미지" />
-```
+아메리카노<br>
+<img src="/img/americano.png" alt="아메리카노 이미지" /><br>
+카페라떼<br>
+<img src="" alt="카페라떼 이미지" />
+
+<br><br>
 
 <hr>
 
