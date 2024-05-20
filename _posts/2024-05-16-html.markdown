@@ -5,7 +5,41 @@ date: 2024-05-16 16:54:35 +0900
 categories: jekyll update
 ---
 
+<style>
+    h3::before {
+        content: "🔥 "
+    }
+
+    h3.no-emoji::before {
+        content: none;
+    }
+
+    code.no-block {
+            font-family: "Courier New", Courier, monospace;
+            background-color: transparent;
+            border: none
+        }
+</style>
+
 # HTML
+
+## 목차
+
+<!-- 1. [HTML 문서 기본 양식](#html-문서-기본-양식)
+2. [기본 태그](#기본-태그들)<br>
+   2.1. [&lt;hn&gt; 제목 태그](#제목-태그-hn)<br>
+   2.2. [&lt;p&gt; 문단 태그](#문단-태그)<br>
+   2.3. [&lt;a&gt; 링크 태그](#링크-태그)<br>
+   2.4. [&lt;pre&gt; 서식 있는 텍스트 태그](#서식-있는-텍스트-태그)<br>
+   2.5. [&lt;hr&gt; 수평선 태그](#수평선-태그)<br>
+   2.6. [&lt;br&gt; 줄바꿈 태그](#줄바꿈-태그)<br>
+   2.7. [&lt;blockquote&gt; 인용문 태그](#인용문-태그)<br>
+3. [텍스트 관련 태그](#텍스트-관련-태그) -->
+
+<br><br>
+
+<hr>
+<br><br>
 
 ## HTML 문서 기본 양식
 
@@ -25,9 +59,13 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 <br><br>
 
-## 태그와 콘텐트, 그리고 속성
+<hr />
 
-### 제목 태그
+<br><br>
+
+## 기본 태그
+
+### 제목 태그 &lt;hn&gt;
 
 `<h1>` `<h2>` ... `<h6>`
 
@@ -46,21 +84,21 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 # h1 제목
 
-## h1 제목
+## h2 제목
 
-### h1 제목
+<h3 class="no-emoji">h3 제목</h3>
 
-#### h1 제목
+#### h4 제목
 
-##### h1 제목
+##### h5 제목
 
-###### h1 제목
+###### h6 제목
 
 <br><br>
 
 ### 문단 태그
 
-`<p></P>`
+`<p>`
 
 > 입력
 
@@ -103,7 +141,11 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 ### 링크 태그
 
-`<a></a>`
+`<a>`
+
+> 속성
+
+`href` 이동할 링크의 주소나 위치 값
 
 > 입력
 
@@ -115,15 +157,11 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 <a href="https://www.naver.com">네이버</a>
 
-> 속성
-
-`href` 이동할 링크의 주소나 위치 값
-
 <br><br>
 
 ### 서식 있는 텍스트 태그
 
-`<pre></pre>` <br> 서식 있는(Preformatted) 텍스트를 넣기 위한 태그
+`<pre>` <br> 서식 있는(Preformatted) 텍스트를 넣기 위한 태그
 
 > 입력
 
@@ -191,8 +229,6 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 두 번째 줄
 
-<br>
-
 <br><br>
 
 ### 줄바꿈 태그
@@ -209,4 +245,447 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 첫 번째 줄<br />두 번째 줄
 
+<br><br>
+
+### 인용문 태그
+
+`<blockquote>`
+
+> 입력
+
+```html
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+        Words can be like X-rays, if you use them properly—they’ll go through
+        anything. You read and you’re pierced.
+    </p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
+```
+
+> 출력
+
+<blockquote style="border: none" cite="https://www.huxley.net/bnw/four.html">
+    <p>
+    Words can be like X-rays, if you use them properly—they’ll go through
+    anything. You read and you’re pierced.
+    </p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
+
+<br><br>
+
+### 이미지 태그
+
+`<img>`
+
+> 속성
+
+`src` 이미지의 링크나 위치 값<br>
+`alt` 에러로 인해 이미지가 나타나지 않을 경우 나타나는 대체 텍스트<br>
+
+> 입력
+
+```html
+<img src="D:\lecture\html\img\caffe_americano.png" alt="아메리카노 이미지" />
+```
+
+> 출력
+
+<img src="../img/americano.png" alt="아메리카노 이미지" />
+```
+
+<hr>
+
+<br><br>
+
+## 텍스트 관련 태그
+
+### 텍스트 굵게
+
+`<b>`<br>시각적으로만 강조
+
+> 입력
+
+```html
+텍스트를 <b>굵게</b> 표시합니다.
+```
+
+> 출력
+
+텍스트를 <b>굵게</b> 표시합니다.
+
+<br><br>
+
+### 텍스트 강조
+
+`<strong>`
+<br>시각적 강조, 의미적 중요성 포함
+<br>브라우저에게 중요함을 알림
+
+> 입력
+
+```html
+텍스트를 <strong>강조하여</strong> 표시합니다.
+```
+
+> 출력
+
+텍스트를 <strong>강조하여</strong> 표시합니다.
+
+<br><br>
+
+### 이텔릭체 텍스트
+
+`<i>`<br>
+
+> 입력
+
+```html
+텍스트를 <i>이탤릭체로</i> 표시합니다.
+```
+
+> 출력
+
+텍스트를 <i>이탤릭체로</i> 표시합니다.
+
+<br><br>
+
+### 이텔릭체 텍스트
+
+`<em>`<br>
+
+> 입력
+
+```html
+텍스트를 <em>이탤릭체로 강조하여</em> 표시합니다.
+```
+
+> 출력
+
+텍스트를 <em>이탤릭체로 강조하여</em> 표시합니다.
+
+<br><br>
+
+### 윗첨자, 아랫첨자
+
+`<sup>` 윗 첨자<br>
+`<sub>` 아랫 첨자
+
+> 입력
+
+```html
+텍스트<sup>윗첨자</sup>
+<br />
+텍스트<sub>아랫첨자</sub>
+```
+
+> 출력
+
+텍스트<sup>윗첨자</sup><br>
+텍스트<sub>아랫첨자</sub>
+
+<br><br>
+
+### 텍스트 하이라이트
+
+`<mark>`<br>
+
+> 입력
+
+```html
+텍스트 <mark>하이라이트</mark>
+```
+
+> 출력
+
+텍스트 <mark>하이라이트</mark>
+
+<br><br>
+
+### 텍스트 줄 긋기
+
+`<s>`<br>
+`<u>`<br>
+시각적인 목적만 있음
+
+> 입력
+
+```html
+가운데 줄이 그어진 <s>텍스트</s>
+<br />
+밑줄이 그어진 <u>텍스트</u>
+```
+
+> 출력
+
+가운데 줄이 그어진 <s>텍스트</s><br>
+밑줄이 그어진 <u>텍스트</u>
+
+<br><br>
+
+### 수정된 텍스트
+
+`<ins>` 문서에서 새로 추가된 텍스트<br>
+`<del>` 문서에서 삭제된 텍스트<br>
+일반적으로 문서의 수정 내용을 강조할 때 사용<br>
+수정 이력이나 버전 관리를 나타낼 때 사용
+
+> 입력
+
+```html
+<del>수정전</del> <ins>수정후</ins> 텍스트 입니다.
+```
+
+> 출력
+
+<del>수정전</del> <ins>수정후</ins> 텍스트 입니다.
+
+<br><br>
+
+### 코드
+
+`<code>`<br>코드(code)의 일부분을 나타낼 때 사용
+
+> 입력
+
+```html
+<code> function sum(){ } </code>
+```
+
+> 출력
+
+<code class="no-block">function sum(){ }</code>
+
+<br><br>
+
+### 코드
+
+`<code>`<br>코드(code)의 일부분을 나타낼 때 사용
+
+> 입력
+
+```html
+<code> function sum(){ } </code>
+```
+
+> 출력
+
+<code class="no-block">function sum(){ }</code>
+
+<br><br>
+
+<hr>
+<br><br>
+
+## 리스트 관련 태그
+
+리스트는 &lt;ol&gt;, &lt;ul&gt; 태그에 하위 태그로 &lt;li&gt; 를 사용해 만든다.
+
+### 순서가 있는 리스트
+
+`<ol>`
+
+> 입력
+
+```html
+라면 끓이기
+<ol>
+    <li>물을 끓인다.</li>
+    <li>면과 스프를 넣는다.</li>
+    <li>맛있게 먹는다.</li>
+</ol>
+```
+
+> 출력
+
+라면 끓이기
+
+<ol>
+    <li>물을 끓인다.</li>
+    <li>면과 스프를 넣는다.</li>
+    <li>맛있게 먹는다.</li>
+</ol>
+
+<br><br>
+
+### 순서가 없는 리스트
+
+`<ul>`
+
+> 입력
+
+```html
+카페 메뉴판
+<ul>
+    <li>카페라때</li>
+    <li>카푸치노</li>
+    <li>과일주스</li>
+</ul>
+```
+
+> 출력
+
+<ul>
+    <li>카페라때</li>
+    <li>카푸치노</li>
+    <li>과일주스</li>
+</ul>
+
+<br><br>
+
+### 정의 리스트
+
+`<dl>`
+
+> 입력
+
+```html
+<h3>front_end 기술</h3>
+<dl>
+    <dt>HTML5</dt>
+    <dd>웹 구조를 만들고, 컨텐츠를 넣는 언어</dd>
+    <dt>CSS</dt>
+    <dd>웹 문서의 스타일을 꾸며주는 언어</dd>
+    <dt>JS</dt>
+    <dd>웹 문서를 동적으로 만들어 주는 언어</dd>
+</dl>
+```
+
+> 출력
+
+<h3 class="no-emoji">front_end 기술</h3>
+HTML5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹 구조를 만들고, 컨텐츠를 넣는 언어<br>
+CSS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹 문서의 스타일을 꾸며주는 언어<br>
+JS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹 문서를 동적으로 만들어 주는 언어
+
+<br><br>
+
+<hr>
+<br><br>
+
+## 테이블 관련 태그
+
+&lt;tr&gt; 태그는 한 행을, &lt;td&gt; 태그는 하나의 칸을 생성한다.<br>
+&lt;tr&gt; 태그 대신 &lt;thead&gt; 태그와 &lt;tbody&gt; 태그를 이용해 시맨틱하게 작성도 가능하다.<br>
+각 &lt;td&gt; 태그는 &lt;th&gt; 태그를 이용해 직접 헤더임을 표시할 수도 있다.<br>
+
+`<table>`<br>
+테이블 구조 생성<br>
+`<tr>`<br>
+테이블 행 생성<br>
+`<th>`<br>
+테이블 헤더 칸 생성<br>
+`<td>`<br>
+테이블 칸 생성<br>
+`<thead>`<br>
+테이블 행 생성(시맨틱)<br>
+`<tbody>`<br>
+테이블 행 생성(시맨틱)<br>
+
+> 입력
+
+```html
+<table>
+    <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+        <th>성별</th>
+    </tr>
+    <tr>
+        <td>홍길동</td>
+        <td>25</td>
+        <td>010-0000-0000</td>
+        <td>남</td>
+    </tr>
+</table>
+```
+
+```html
+<table>
+    <thead>
+        <th>이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+        <th>성별</th>
+    </thead>
+    <tbody>
+        <td>홍길동</td>
+        <td>25</td>
+        <td>010-0000-0000</td>
+        <td>남</td>
+    </tbody>
+</table>
+```
+
+> 출력
+
+<table>
+    <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+        <th>성별</th>
+    </tr>
+    <tr>
+        <td>홍길동</td>
+        <td>25</td>
+        <td>010-0000-0000</td>
+        <td>남</td>
+    </tr>
+</table>
+
 <br>
+
+> &lt;td&gt; 태그의 속성
+
+`colspan` n개의 열을 병합<br>
+`rowspan` n개의 행을 병합
+
+> 입력
+
+```html
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2">1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+> 출력
+
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2">1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
