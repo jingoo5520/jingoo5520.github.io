@@ -19,6 +19,14 @@ categories: jekyll update
             background-color: transparent;
             border: none
         }
+
+    table {
+        border: 1px solid black;
+    }
+
+    table th, tr, td {
+        border: 1px solid black;
+    }
 </style>
 
 # HTML
