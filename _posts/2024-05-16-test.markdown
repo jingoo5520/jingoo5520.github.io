@@ -1,0 +1,62 @@
+---
+layout: post
+title: "test"
+date: 2024-05-16 16:54:35 +0900
+categories: TEST
+---
+
+### First tabs
+
+{% tabs one %}
+
+{% tab one 1 %}
+
+```yaml
+hello:
+    - "whatsup"
+    - "hi"
+    ` 123
+```
+
+{% endtab %}
+
+{% tab one 2 %}
+
+```json
+{
+    "hello": ["whatsup", "hi"]
+}
+```
+
+{% endtab %}
+
+{% endtabs %}
+
+<!-- ------------------------ -->
+
+### First tabs
+
+{% tabs two %}
+
+{% tab two 3 %}
+
+```yaml
+hello:
+    - "whatsup"
+    - "hi"
+    ` 123
+```
+
+{% endtab %}
+
+{% tab two 4 %}
+
+```json
+{
+    "hello": ["whatsup", "hi"]
+}
+```
+
+{% endtab %}
+
+{% endtabs %}
