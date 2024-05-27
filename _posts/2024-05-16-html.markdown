@@ -64,8 +64,6 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 > 출력
 
-<!-- no toc -->
-
 # h1 제목
 
 ## h2 제목
@@ -231,7 +229,7 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 <br>
 
-### 인용문 태그
+#### 인용문 태그
 
 `<blockquote>`
 
@@ -285,13 +283,9 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 카페라떼<br>
 <img src="" alt="카페라떼 이미지" />
 
-<br>
+<br><br>
 
-<hr>
-
-<br>
-
-## 텍스트 관련 태그
+### 텍스트 관련 태그
 
 #### 텍스트 굵게
 
@@ -449,12 +443,9 @@ vsCode에서 작성시 ! + [TAB] 을 이용해 기본 양식 자동 완성
 
 <code class="no-block">function sum(){ }</code>
 
-<br>
+<br><br>
 
-<hr>
-<br>
-
-## 리스트 관련 태그
+### 리스트 관련 태그
 
 리스트는 &lt;ol&gt;, &lt;ul&gt; 태그에 하위 태그로 &lt;li&gt; 를 사용해 만든다.
 
@@ -538,18 +529,15 @@ CSS<br>
 JS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;웹 문서를 동적으로 만들어 주는 언어
 
-<br>
+<br><br>
 
-<hr>
-<br>
-
-## 테이블 관련 태그
+### 테이블 관련 태그
 
 &lt;tr&gt; 태그는 한 행을, &lt;td&gt; 태그는 하나의 칸을 생성한다.<br>
 &lt;tr&gt; 태그 대신 &lt;thead&gt; 태그와 &lt;tbody&gt; 태그를 이용해 시맨틱하게 작성도 가능하다.<br>
 각 &lt;td&gt; 태그는 &lt;th&gt; 태그를 이용해 직접 헤더임을 표시할 수도 있다.<br>
 
-### 테이블 구조
+#### 테이블 구조
 
 `<table>`<br>
 
@@ -682,9 +670,9 @@ table, th, tr, td {
     </tbody>
 </table>
 
-<br>
+<br><br>
 
-## 멀티미디어 태그
+### 멀티미디어 태그
 
 #### 외부 리소스 삽입
 
@@ -749,9 +737,9 @@ object {
 
 <audio src="/public/audio/testAudio.mp3" controls></audio>
 
-<br>
+<br><br>
 
-## 시맨틱 태그
+### 시맨틱 태그
 
 포함된 컨텐츠의 특정 의미를 정의하고 목적을 갖는 태그
 코드를 읽기 쉬워지고, 기계 입장에서 더 쉽게 이해할 수 있음
@@ -777,9 +765,9 @@ SEO\* 성능 향상
 <img src="/public/img/semantic-tags.png" width="600px" />
 [https://www.semrush.com](https://www.semrush.com)
 
-<br>
+<br><br>
 
-## FORM 태그
+### FORM 태그
 
 #### 사용자 입력을 받는 폼을 정의
 
