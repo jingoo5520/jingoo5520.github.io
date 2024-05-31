@@ -9,8 +9,7 @@
     color: #75715e;
 } /* Comment */
 .highlight .err {
-    color: #960050;
-    background-color: #1e0010;
+    color: #f92672;
 } /* Error */
 .highlight .k {
     color: #66d9ef;

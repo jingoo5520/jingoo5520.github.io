@@ -129,6 +129,11 @@ code.highlighter-rouge {
     padding: 0px 5px 0 5px;
 }
 
+ul {
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+
 .container {
     min-height: 100%;
     display: flex;
@@ -137,7 +142,8 @@ code.highlighter-rouge {
 }
 
 .content {
-    /*margin-left: 180px;*/
+    margin: 0 auto;
+    max-width: 1000px;
     flex: 1 1 auto;
     padding: 0px 30px;
 }
@@ -264,7 +270,7 @@ article .share .gplus:hover {
 
 article {
     padding: 0 5% 0;
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 100px;
     line-height: 1.9;
 }

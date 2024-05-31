@@ -595,12 +595,16 @@ JS<br>
 </table>
 ```
 
-<!-- prettier-ignore -->
+===
+
 ```css
-table, th, tr, td {
+table,
+th,
+tr,
+td {
     border: 1px solid black;
 }
-````
+```
 
 > 출력
 
