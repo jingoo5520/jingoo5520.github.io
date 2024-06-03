@@ -1155,7 +1155,9 @@ h4[title] {
 
 ### 박스의 구성요소와 속성
 
-<img src="/public/img/box-model.png">
+<img src="/public/img/americano.png" alt="아메리카노 이미지" /><br>
+<img src="/public/img/box-model.png" alt="박스모델 이미지" /><br>
+<img src="/public/img/box-model.png" alt="박스모델 이미지"><br>
 
 `컨텐츠(Content)` 실제로 텍스트나 이미지가 들어가는 영역<br>
 **width**<br>
