@@ -170,7 +170,34 @@ categories: CSS
 
     .list-first li, .list-second li {
         border: 1px dashed black;
-    } 
+    }
+
+    .box-model {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border: 5px solid black;
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    #model1 {
+        background-color: skyblue;
+        box-sizing: content-box;
+    }
+
+    #model2 {
+        background-color: pink;
+        box-sizing: border-box;
+    }
+
+    /* .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+    } */
 </style>
 
 # CSS
@@ -1155,9 +1182,7 @@ h4[title] {
 
 ### 박스의 구성요소와 속성
 
-<img src="/public/img/americano.png" alt="아메리카노 이미지" /><br>
-<img src="/public/img/box-model.png" alt="박스모델 이미지" /><br>
-<img src="/public/img/box-model.png" alt="박스모델 이미지"><br>
+<img src="/public/img/box-model.png" /><br>
 
 `컨텐츠(Content)` 실제로 텍스트나 이미지가 들어가는 영역<br>
 **width**<br>
@@ -1203,11 +1228,69 @@ h4[title] {
 **margin-top, margin-right**, **margin-bottom**, **margin-left** 네 속성을 `margin` 으로 축약 하여 한 번에 작성 가능<br>
 축약시 top, right- bottom, left 순서를 지켜야 함
 
-### 요소 자체 속성
+### 크기에 대한 속성
 
 `box-sizing`<br>
 
+**border-box**: 요소의 너비와 높이가 border 까지 포함 <br>
+**content-box(default)**: 요소의 너비와 높이가 콘텐츠 영역만을 포함<br>
+
+> ex
+
+```html
+<div class="box" id="box1">Content</div>
+<div class="box" id="box2">Content</div>
+```
+
+```css
+.box {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#box1 {
+    background-color: skyblue;
+    box-sizing: content-box;
+}
+
+#box2 {
+    background-color: pink;
+    box-sizing: border-box;
+}
+```
+
+> 출력
+
+<style>
+   
+</style>
+
+<div class="clear">
+    <div class="box-model" id="model1">Content</div>
+    <img src="/public/img/box-model1.png" />
+</div>
+
+<br>
+
+<div class="clear">
+    <div class="box-model" id="model2">Content</div>
+    <img src="/public/img/box-model2.png">
+</div>
+
+<br>
+
+`max-width` 최대 너비<br>
+`min-width` 최소 너비<br>
+
+<br>
 <hr>
+<br>
 
 #### 블록요소와 인라인 요소
 

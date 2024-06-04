@@ -1,0 +1,107 @@
+---
+layout: post
+title: "에러 목록"
+date: 2024-05-24 00:00:00 +0900
+categories: javaScript
+---
+
+## TypeError
+
+### Uncaught TypeError: Cannot set properties of null
+
+> error
+
+```
+Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
+```
+
+<br>
+
+> situation
+
+script 태그 내에서 HTML 요소에 접근하여 속성 값을 변경시켰으나 적용이 안됨
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        ...
+        <script>
+            document.getElementById("name").innerHTML = "홍길동";
+        </script>
+    </head>
+    <body>
+        <div>저는 <span id="name">이름</span> 입니다.</div>
+    </body>
+</html>
+```
+
+> output
+
+<div>저는 <span id="name">이름</span> 입니다.</div>
+
+<br>
+
+> 에러 발생 이유
+
+코드는 위에서 부터 읽힘<br>
+body 태그에 있는 id="name" 인 요소를 읽기 전에 document.getElementById("name") 코드로 해당 요소를 읽으려 함
+
+<br>
+
+> 해결 방법 1)
+
+script 코드를 요소 아래에 위치
+
+```html
+<body>
+    <div>저는 <span id="name">이름</span> 입니다.</div>
+    <script>
+        document.getElementById("name").innerHTML = "홍길동";
+    </script>
+</body>
+```
+
+> 해결 방법 2)
+
+window.onload() 메서드 오버라이드(재정의)<br>
+페이지 로드시 자동으로 실행되는 전역 콜백함수
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        ...
+        <script>
+            window.onload = function () {
+                document.getElementById("name").innerHTML = "홍길동";
+            };
+        </script>
+    </head>
+    <body>
+        <div>저는 <span id="name">이름</span> 입니다.</div>
+    </body>
+</html>
+```
+
+<br>
+
+### Uncaught TypeError: Assignment to constant variable
+
+> situation
+
+상수에 새로운 값을 할당하려 할때 발생
+
+```javascript
+const PI = 3.14;
+
+PI = 5; // 재할당 불가, 에러발생
+```
+
+<br>
+
+> 에러 발생 이유
+
+상수에 새로운 값을 할당할 수 없음.
+
+<br>
