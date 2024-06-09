@@ -23,7 +23,7 @@ if(조건) {
 let num = 3;
 
 if (a < 5) {
-  num++;
+    num++;
 }
 ```
 
@@ -48,9 +48,9 @@ let num = 3;
 let type;
 
 if (num % 2 == 0) {
-  type = "짝수";
+    type = "짝수";
 } else {
-  type = "홀수";
+    type = "홀수";
 }
 
 console.log(type); // "홀수"
@@ -81,15 +81,15 @@ let average = 72;
 let grade;
 
 if (average >= 90) {
-  grade = "A";
+    grade = "A";
 } else if (average < 90 && average >= 80) {
-  grade = "B";
+    grade = "B";
 } else if (average < 80 && average >= 70) {
-  grade = "C";
+    grade = "C";
 } else if (average < 70 && average >= 60) {
-  grade = "D";
+    grade = "D";
 } else {
-  grade = "E";
+    grade = "E";
 }
 
 console.log(average); // C
@@ -99,11 +99,11 @@ console.log(average); // C
 
 ### switch-case
 
-- 변수(조건)의 값에 따라 시작하는 코드가 달라짐
+-   변수(조건)의 값에 따라 시작하는 코드가 달라짐
 
-- break; 를 입력하지 않으면 해당 값의 코드부터 default 값의 코드까지 순차적으로 실행
+-   break; 를 입력하지 않으면 해당 값의 코드부터 default 값의 코드까지 순차적으로 실행
 
-- 변수(조건)의 값에 따라 각각 다른 코드가 실행 되어야 한다면 break; 를 사용
+-   변수(조건)의 값에 따라 각각 다른 코드가 실행 되어야 한다면 break; 를 사용
 
 #### 의사코드
 
@@ -131,21 +131,21 @@ let average = 72;
 let grade;
 
 switch (average / 10) {
-  case 10:
-  case 9:
-    grade = "A";
-    break;
-  case 8:
-    grade = "B";
-    break;
-  case 7:
-    grade = "C";
-    break;
-  case 6:
-    grade = "D";
-    break;
-  default:
-    grade = "F";
+    case 10:
+    case 9:
+        grade = "A";
+        break;
+    case 8:
+        grade = "B";
+        break;
+    case 7:
+        grade = "C";
+        break;
+    case 6:
+        grade = "D";
+        break;
+    default:
+        grade = "F";
 }
 
 console.log(grade); // "C"
@@ -153,5 +153,3 @@ console.log(grade); // "C"
 // 만약 break문이 없다면?
 // 경우가 average / 10 = 7 이므로 case 7: 코드부터 끝까지 실행하므로 최종적으로 grade = "F" 가 됨
 ```
-
-###

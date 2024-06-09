@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <script>
+            let num1 = 3;
+            let num2 = 5;
 
-      switch(변수) {
-      	case 값1 :
-      	    변수가 값1일 때 수행할 문장(들);
-      	    break;
-      	case 값2 :
-      	    변수가 값2일 때 수행할 문장(들);
-      	    break;
+            let temp;
 
-              ...
+            document.write(`num1: ${num1}, num2: ${num2} <br>`);
 
-      	case 값n :
-      	    변수가 값n일 때 수행할 문장(들);
-      	    break;
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
 
-      	default :
-      	    변수가 위의 어느 값도 아닐 때 수행할 문장(들)
-
-      }
-    </script>
-  </head>
-  <body>
-    <div>저는 <span id="name">이름</span> 입니다.</div>
-  </body>
+            document.write(`num1: ${num1}, num2: ${num2}`);
+        </script>
+    </head>
+    <body></body>
 </html>
