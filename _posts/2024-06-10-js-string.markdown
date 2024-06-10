@@ -1,0 +1,41 @@
+---
+layout: post
+title: "문자열"
+date: 2024-06-10 00:00:00 +0900
+categories: javaScript
+---
+
+## 문자열
+
+### 문자열 선언
+
+-   따옴표, 쌍따옴표, 백틱을 사용해 문자열을 선언할 수 있음
+-   시작과 끝에 같은 문자를 사용
+
+> ex
+
+```javascript
+let name1 = "둘리";
+let name2 = "홍길동";
+let name3 = `징징이`;
+
+console.log(name1); // 둘리
+console.log(name2); // 홍길동
+console.log(name3); // 징징이
+
+console.log("저는 " + name1 + " 입니다."); // 저는 둘리 입니다.
+```
+
+#### 템플릿 리터럴
+
+-   백틱을 사용하여 선언된 문자열
+-   `${}`를 이용해 JavaScript 변수나 표현식을 문자열에 포함 가능
+-   여러 줄로 선언 가능
+
+> ex
+
+```javascript
+const name = `홍길동`;
+
+console.log(`저는 ${name} 입니다.`); // 저는 홍길동 입니다.
+```
