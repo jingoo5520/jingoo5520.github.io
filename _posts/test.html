@@ -5,16 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title></title>
         <script>
-            let name1 = "둘리";
-            let name2 = "홍길동";
-            let name3 = `징징이`;
+            let arr = [10, 20, 30];
 
-            console.log(name1); // 둘리
-            console.log(name2); // 홍길동
-            console.log(name3); // 징징이
+            for (index in arr) {
+                console.log(index); // 0, 1, 2
+            }
 
-            console.log("저는 " + name1 + " 입니다");
+            let student = {
+                name: "홍길동",
+                korScore: 80,
+                engScore: 90,
+                mathScore: 88,
+            };
+
+            for (property in student) {
+                console.log(property); // name, korScroe, engScore, mathScore
+            }
         </script>
     </head>
-    <body></body>
+    <body>
+        for(초기화식; 종료 조건; 증감식){ 반복 실행할 코드 ... for(초기화식2;
+        종료 조건; 증감식) { 반복 실행할 코드2 } ... }
+    </body>
 </html>
