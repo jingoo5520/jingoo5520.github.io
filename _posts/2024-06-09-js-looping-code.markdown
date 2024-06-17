@@ -102,9 +102,8 @@ console.log(sum); // 5050
 
 ### for-in 반복문
 
--   배열의 경우 모든 요소의 인덱스에 대하여 반복
-
--   객체의 경우 모든 속성에 대하여 반복
+-   객체의 모든 열거 가능한 속성에 대해 반복
+-   배열 객체의 경우 모든 요소의 인덱스에 대하여 반복
 
 #### 의사 코드
 
@@ -139,9 +138,14 @@ for (property in student) {
 
 ### for-of 반복문
 
--   배열의 경우 모든 요소에 대하여 반복
+-   반복가능한 객체\* 에 대해 반복
 
--   객체의 경우 모든 속성값에 대하여 반복
+<br>
+
+**반복가능한 객체(iterable object)**<br>
+
+-   특정 방식으로 접근되어 순회할 수 있는 객체
+-   대표적으로 Array, String, Set, Map 등이 있음
 
 #### 의사 코드
 
@@ -160,15 +164,10 @@ for (element of arr) {
     console.log(element); // 10, 20, 30
 }
 
-let student = {
-    name: "홍길동",
-    korScore: 80,
-    engScore: 90,
-    mathScore: 88,
-};
+let str = "student";
 
-for (property of student) {
-    console.log(property); // "홍길동", 80, 90, 88
+for (char of str) {
+    console.log(char); // s, t, u, d, e, n, t
 }
 ```
 

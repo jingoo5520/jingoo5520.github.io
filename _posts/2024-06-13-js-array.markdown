@@ -175,8 +175,6 @@ console.log(arr2); // [1, 2, 3]
 **function(currentValue, [index, arr])**: 각 요소 차례 마다 실행할 함수<br>
 **thisValue**
 
-<br>
-
 > ex
 
 ```javascript
