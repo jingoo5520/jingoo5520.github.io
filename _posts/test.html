@@ -5,9 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title></title>
         <script>
-            const sum = (num1, num2) => num1 + num2;
+            const account = {
+                owner: "홍길동",
+                accNum: "111-222-333333",
+                balance: 5000000,
 
-            console.log(sum(10, 20)); // 30
+                checkBalance: function () {
+                    console.log(this.balance);
+                },
+            };
         </script>
     </head>
     <body></body>

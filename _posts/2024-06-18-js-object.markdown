@@ -1,0 +1,40 @@
+---
+layout: post
+title: "객체"
+date: 2024-06-18 00:00:00 +0900
+categories: javaScript
+---
+
+<!--
+## 객체
+
+###
+
+-->
+
+## 객체
+
+### 자바스크립트에서의 객체(Object)란?
+
+-   키(key)와 값(value)으로 구성된 프로퍼티(property) 들의 집합
+-   프로퍼티의 값으로 자바스크립트에서 사용할 수 있는 모든 값을 사용할 수 있음
+
+-   프로퍼티 값이 함수인 경우 일반 함수와 구분하기 위해 메서드라 부름
+
+### 객체 생성 방법
+
+#### 객체 리터럴
+
+중괄호 `{}`를 사용하여 객체 생성
+
+```javascript
+const account = {
+    owner: "홍길동",
+    accNum: "111-222-333333",
+    balance: 5000000,
+
+    checkBalance: function () {
+        console.log(this.balance);
+    },
+};
+```
