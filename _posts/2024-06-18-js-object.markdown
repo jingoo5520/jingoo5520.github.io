@@ -7,8 +7,11 @@ categories: javaScript
 
 <!--
 ## 객체
+### 자바스크립트에서의 객체(Object)란?
+### 객체 생성 방법
+### 객체의 속성과 메서드
 
-###
+## 자바스크립트 내장 객체
 
 -->
 
@@ -27,6 +30,8 @@ categories: javaScript
 
 중괄호 `{}`를 사용하여 객체 생성
 
+> ex
+
 ```javascript
 const account = {
     owner: "홍길동",
@@ -37,4 +42,127 @@ const account = {
         console.log(this.balance);
     },
 };
+```
+
+#### 생성자 함수
+
+`function` 키워드로 생성자를 정의하고, `new`연산자를 이용해 객체 생성
+
+> ex
+
+```javascript
+function Account(owner, accNum, balance) {
+    this.owner = owner;
+    this.accNum = accNum;
+    this.balance = balance;
+
+    this.checkBalance = function () {
+        console.log(this.balance);
+    };
+}
+
+const account = new Account("홍길동", "111-222-333333", 5000000);
+```
+
+#### 클래스와 생성자 정의
+
+`class` 키워드를 사용
+
+> ex
+
+```javascript
+class Account {
+    constructor(owner, accNum, balance) {
+        this.owner = owner;
+        this.accNum = accNum;
+        this.balance = balance;
+    }
+
+    checkBalance() {
+        console.log(this.balance);
+    }
+}
+
+const account = new Account("홍길동", "111-222-333333", 5000000);
+```
+
+<br>
+
+### 객체의 속성과 메서드
+
+#### 속성 접근
+
+점 표기법, 대괄호 표기법을 이용해 객체의 속성에 접근할 수 있음
+
+> ex
+
+```javascript
+// 객체 생성 함수 선언
+function Account(owner, accNum, balance) {
+    this.owner = owner;
+    this.accNum = accNum;
+    this.balance = balance;
+
+    this.checkBalance = function () {
+        console.log(this.balance);
+    };
+}
+
+// 객체1 생성
+const account1 = new Account("홍길동", "111-222-333333", 5000000);
+
+// 속성 접근
+console.log(account1.owner); // 홍길동
+console.log(account1["accNum"]); // 111-222-333333
+account1.checkBalance(); // 5000000
+```
+
+#### 속성 추가, 수정, 삭제
+
+> ex
+
+```javascript
+// 객체 생성 함수 선언
+function Account(owner, accNum, balance) {
+    ...
+}
+
+// 객체1 생성
+const account1 = new Account("홍길동", "111-222-333333", 5000000);
+
+// 속성 추가
+account1.bankName = "우리은행";
+console.log(account1.bankName); // 우리은행
+
+// 속성 수정
+account1.balance = 4000000;
+console.log(account1.balance); // 4000000
+
+// 속성 삭제
+delete account1.bankName;
+console.log(account1.bankName); // undefined
+```
+
+<br>
+
+### 객체의 정적 메서드
+
+`Object.keys()` 객체 프로퍼티의 키들을 배열로 반환<br>
+`Object.values()` 객체 프로퍼티의 값들을 배열로 반환<br>
+
+> ex
+
+```javascript
+const account = {
+    owner: "홍길동",
+    accNum: "111-222-333333",
+    balance: 5000000,
+
+    checkBalance: function () {
+        console.log(this.balance);
+    },
+};
+
+console.log(Object.keys(account)); // ['owner', 'accNum', 'balance', 'checkBalance']
+console.log(Object.values(account)); // ['홍길동', '111-222-333333', 5000000, ƒ]
 ```
