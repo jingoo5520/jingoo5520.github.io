@@ -5,9 +5,15 @@ date: 2024-05-24 00:00:00 +0900
 categories: javaScript
 ---
 
-## TypeError
+<!--
+    ## Uncaught TypeError
+    ### : Cannot set properties of null
+    ### : Assignment to constant variable
+-->
 
-### Uncaught TypeError: Cannot set properties of null
+## Uncaught TypeError
+
+### : Cannot set properties of null
 
 > error
 
@@ -42,14 +48,14 @@ script 태그 내에서 HTML 요소에 접근하여 속성 값을 변경시켰�
 
 <br>
 
-> 에러 발생 이유
+> reason
 
-코드는 위에서 부터 읽힘<br>
-body 태그에 있는 id="name" 인 요소를 읽기 전에 document.getElementById("name") 코드로 해당 요소를 읽으려 함
+-   코드는 위에서 부터 읽힘<br>
+-   body 태그에 있는 id="name" 인 요소를 읽기 전에 document.getElementById("name") 코드로 해당 요소를 읽으려 함
 
 <br>
 
-> 해결 방법 1)
+> solution 1)
 
 script 코드를 요소 아래에 위치
 
@@ -62,10 +68,9 @@ script 코드를 요소 아래에 위치
 </body>
 ```
 
-> 해결 방법 2)
+> solution 2)
 
-window.onload() 메서드 오버라이드(재정의)<br>
-페이지 로드시 자동으로 실행되는 전역 콜백함수
+페이지 로드시 자동으로 실행되는 전역 콜백함수인 window.onload() 를 오버라이드(재정의)
 
 ```html
 <!DOCTYPE html>
@@ -86,7 +91,7 @@ window.onload() 메서드 오버라이드(재정의)<br>
 
 <br>
 
-### Uncaught TypeError: Assignment to constant variable
+### : Assignment to constant variable
 
 > situation
 
@@ -100,7 +105,7 @@ PI = 5; // 재할당 불가, 에러발생
 
 <br>
 
-> 에러 발생 이유
+> reason
 
 상수에 새로운 값을 할당할 수 없음.
 

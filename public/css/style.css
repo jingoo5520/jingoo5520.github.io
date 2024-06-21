@@ -129,7 +129,8 @@ code.highlighter-rouge {
     padding: 0px 5px 0 5px;
 }
 
-ul {
+ul,
+ol {
     margin: 0;
     padding: 0 0 0 30px;
 }

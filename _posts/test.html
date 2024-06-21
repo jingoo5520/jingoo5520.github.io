@@ -6,8 +6,15 @@
         <title></title>
 
         <script>
-            const regex = `/${pattern}/${flags}`;
+            onload = function () {
+                let elt = document.getElementById("parent");
+                console.log(elt.firstChild);
+            };
         </script>
     </head>
-    <body></body>
+    <body>
+        <div id="parent">
+            <div id="child1">child1</div>
+        </div>
+    </body>
 </html>
