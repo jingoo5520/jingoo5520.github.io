@@ -117,12 +117,19 @@ select rtrim('Database  ') from dual; -- Database
 
 #### 문자열 대체
 
-`replace()`
+`replace(char, search_string, [replace_string])` <br>
 
-#### 문자열 채우기
+**char**: 베이스 문자열 <br>
+**search_string**: 찾을 문자열 <br>
+**replace_string**: 변경 할 문자열 <br>
 
-`lpad()`
-`rpad()`
+#### 문자열 빈공간 채우기
+
+`lpad(expr1, n, [expr2])` 문자열 왼쪽 채우기<br>
+`rpad(expr1, n, [expr2])` 문자열 오른쪽 채우기<br>
+**expr1**: 베이스 문자열<br>
+**n**: 목표 문자열 길이<br>
+**expr2**: 빈 공간을 채울 문자<br>
 
 <br>
 
@@ -130,27 +137,33 @@ select rtrim('Database  ') from dual; -- Database
 
 #### 절대값
 
-`abs()`
+`abs(n)`
 
 #### 소수점
 
-`floor()`
-`ceil()`
-`round()`
-`trunc()`
+`floor(n)` 소수점 버림(절삭)<br>
+`ceil(n)` 소수점 올림<br>
+`round(n, [integer])` 소수점 반올림<br>
+**integer**: integer 자리수 아래에서 반올림
+
+`trunc(n1, [n2])` 소수점 내림
+**n2**: n2 자리수 아래에서 내림
 
 #### 나머지
 
-`mod()`
+`mod(n2, n1)`
+**n2 / n1** 나머지<br>
 
 #### 양수, 음수, 0 분류
 
-`sign()`
+`sign(n)`
 
 #### 제곱
 
-`power()`
-`sqrt()`
+`power(n2, n1)` 제곱<br>
+**n2<sup>n1</sup>**<br>
+
+`sqrt(n)` 제곱근<br>
 
 <br>
 
@@ -171,9 +184,11 @@ select rtrim('Database  ') from dual; -- Database
 
 `months_between(date1, date2)`
 
-#### 지금부터 가장 가까운 요일의 날짜 반환
+#### 특정 날짜로 부터 가장 가까운 요일의 날짜 반환
 
-`next_day()`
+`next_day(date, char)`
+**date**: 날짜<br>
+**char**: 요일<br>
 
 > ex
 
@@ -184,15 +199,19 @@ select sysdate, next_day(sysdate, '금요일') from dual;
 
 #### 개월수 추가
 
-`add_months()`
+`add_months(date, integer)`
 
 #### 해당 달의 마지막 날짜 반환
 
-`last_day()`
+`last_day(date)`
 
 #### 날짜 올림, 내림
 
-`round()` 기준을 정해 날짜 반올림<br>
+`round(date [, fmt])` 기준을 정해 날짜 반올림<br>
+**fmt**: <br>
+
+<!-- 여기서부터 -->
+
 `trunc()` 기준을 정해 날짜 내림<br>
 
 > ex
