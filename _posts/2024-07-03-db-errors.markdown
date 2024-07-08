@@ -1,0 +1,27 @@
+---
+layout: post
+title: "DB 에러 목록"
+date: 2024-07-03 00:00:00 +0900
+categories: DB
+---
+
+## Oracle
+
+### SQL 파일 한글 깨짐
+
+> case
+
+Oracle에서 SQL 파일을 열었는데, 한글 문자가 모두 깨져있음
+
+<br>
+
+> reason
+
+인코딩 방식 미설정
+
+<br>
+
+> solution
+
+-   인코딩 방식을 UTF-8로 변경
+-   ORACLE) 도구 - 환경설정 - 환경 - 인코딩(E): UTF-8

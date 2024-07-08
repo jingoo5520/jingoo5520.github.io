@@ -13,7 +13,7 @@ categories: DB
 
 > emp Table
 
-<img src="/public/img/db-sql-select/select_0.png" />
+<img src="/public/img/db/select_0.png" />
 
 `SELECT` 조회할 컬럼 지정 <br>
 `FROM` 데이터를 조회할 테이블 지정 <br>
