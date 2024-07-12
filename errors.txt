@@ -3,5 +3,23 @@ bundle exec jekyll serve 시작시
 C:/Ruby32/lib/ruby/gems/3.2.0/gems/bundler-2.5.10/lib/bundler/definition.rb:601:in materialize': Could not find addressable-2.8.7, public_suffix-6.0.0, concurrent-ruby-1.3.3, rexml-3.3.1 in cached gems or installed locally (Bundler::GemNotFound)
 bundler가 필요한 gem들을 찾을 수 없을 때 발생
 
-해결방법: bundle isntall
+해결방법: bundle isntalll
 
+명세서만 보고 다 알수있게 작성
+비밀번호 암호화 sha1 
+생년월일 Y -> 나이제한?
+전화번호, 생년월일 포맷
+출시일?
+커멘트 확실히 적기 // 총금액
+FK인 경우 참조 컬럼적
+
+select 
+
+ex)
+회원가입 절차
+1. 유저 아이디 중복 확인 -> pass?
+2. 가입
+
+탈퇴조건
+
+비밀번호 변경
