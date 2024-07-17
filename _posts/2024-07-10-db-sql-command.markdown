@@ -14,6 +14,10 @@ categories: DB
 **w**: 숫자 전체 길이(max 38)<br>
 **d**: 소수점 이하 자리수<br>
 
+<br>
+<hr>
+<br>
+
 ## DDL(Data Definition Language)
 
 DB 객체(테이블, 인덱스, 뷰)를 생성, 수정, 삭제하는 명령어
@@ -75,15 +79,19 @@ rename column 컬럼명 to 변경할 컬럼명;
 > ex
 
 ```sql
+-- email 컬럼 추가
 alter table member
 add email;
 
+-- userid 컬럼 데이터 크기 변경
 alter table member
 modify userid varchar2(16);
 
+-- email 컬럼 삭제
 alter table member
 drop column email;
 
+-- name 컬럼 이름 username 으로 변경
 alter table member
 rename column name to username;
 ```
@@ -136,6 +144,8 @@ rename 테이블명 to 변경할 테이블명;
 rename member to members;
 ```
 
+<br>
+<hr>
 <br>
 
 ## DML(Data Manipulate Language)

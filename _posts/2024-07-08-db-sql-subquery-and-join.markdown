@@ -132,17 +132,92 @@ where (deptno, sal)
 in (select deptno, max(sal) from emp group by deptno);
 ```
 
+<br>
+<hr>
+<br>
+
 ## 조인
 
-### 교차 조인
+두 개 이상의 테이블을 결합하여 하나의 결과 집합을 만드는 연산
 
-### 등가 조인
+### 교차 조인(Cross Join)
 
-### 비등가 조인
+-   단순하게 두 개 이상의 테이블을 곱연산 하여 출력
+-   테이블 행의 개수끼리 곱한 값이 총 행의 개수가 됨
 
-### 셀프조인
+### 등가 조인(Equi Join)
+
+두 테이블 간의 특정 열의 값이 동일한 행만 결합
+
+> ex
+
+```sql
+-- 사번이 7844인 사원의 정보와 그가 속한 부서명 까지 출력
+select e.empno, e.ename, e.deptno, d.dname
+from emp e join dept d on e.deptno = d.deptno
+where e.empno = 7844;
+```
+
+> output
+
+<img src="/public/img/db/equi_join_0.png">
+
+### 비등가 조인(Bib-Equi Join)
+
+-   등가 조건이 아닌 조건을 사용하는 조인
+-   '>', '>=', '<', '<=' 등을 사용
+
+> ex
+
+```sql
+-- 사원들의 정보와 급여 등급을 출력
+select e.empno, e.ename, e.sal, s.grade
+from emp e join salgrade s
+on e.sal between s.losal and s.hisal;
+```
+
+> output
+
+<img src="/public/img/db/non_equi_join_0.png">
+
+### 셀프조인(Self Join)
+
+-   동일 테이블 사이의 조인
+-   한 행에 있는 값을 다른 행에 있는 다른 값과 비교하기 위해 사용
+-   반드시 테이블에 별칭을 주어야 함
+
+> ex
+
+```sql
+-- 사원의 정보와 매니저 이름을 출력
+select e.empno, e.ename, e.mgr, m.ename as mname
+from emp e join emp m
+on e.mgr = m.empno;
+```
+
+> output
+
+<img src="/public/img/db/self_join_0.png">
 
 ### 외부조인
+
+-   행이 조인 조건에 만족하지 않는 경우(null 등)
+-   조인 조건에 만족하지 않는 행들도 나타내고 싶을 때 사용
+-   기준 컬럼에 따라 오른쪽, 왼쪽 외부 조인이 가능
+
+> ex
+
+```sql
+-- 사원과 소속 부서를 출력하되, 소속된 사원이 없는 부서도 출력
+-- 부서 테이블 기준이므로 right join
+select e.ename, d.dname
+from emp e right join dept d
+on e.deptno = d.deptno;
+```
+
+<br>
+<hr>
+<br>
 
 ## 안시조인
 

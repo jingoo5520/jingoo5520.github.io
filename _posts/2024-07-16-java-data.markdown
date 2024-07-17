@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Variables and DataTypes"
+date: 2024-07-16 00:00:00 +0900
+categories: JAVA
+---
+
+## 변수
+
+## 데이터타입
+
+### 기본형
+
+### 참조형
+
+## 형변환
